@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;500&display=swap');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* ------------- text, links and icons ---------- */
+
+a {
+  font-weight: 500;
+  color: #64cbff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #64cbff;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+h1,h2,h3,h4,h5 {
+  font-family: 'Jost', sans-serif;
+}
+svg {
+  fill: white;
+}
+
+
+/* ------------------ btn -------------- */
+
+button {
+  display: inline-block;
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: rgba(0,0,0,0);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-right: 0.5rem;
+}
+button:hover {
+  border-color: #64cbff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.iconBtn {
+  padding: 1rem 0.7rem;
+  border:none;
+}
+.iconBtn:hover{
+  background-color: rgb(31, 31, 31);
+}
+.listBtn {
+  border-width: 1px;
+}
+
+
+/* ------------------ header -------------- */
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+  padding: 1rem;
+}
+.header h1 {
+  font-size: 6.5rem;
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: -8px;
+  margin: 3rem 0;
+}
+
+/* ------------------ add todo -------------- */
+ 
+.addTodoDiv {
+  background-color: rgb(31, 31, 31);
+  color:white;
+  padding: 2rem 1rem;
+}
+.addTodoDiv div{
+  max-width: 1200px;
+  margin: 0.2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* ------------------ todos --------------- */
+
+.todoWrapper {
+  margin: 0 auto;
+}
+.todo {
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  max-width: 600px;
+  width: 100%;
+  border-bottom: 2px solid rgb(66, 66, 66);
+}
+.checked {
+  color: rgb(117, 117, 117);
+  order: 1;
+}
+
+.listContainer {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  margin-bottom: 7rem;
+}
+
+/* ---------------- input --------------- */
+
+input {
+  padding: 0.7rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
+  border: none;
+  background-color: rgba(0,0,0,0);
+  border-bottom: 2px solid #d5d5d5;
+}
+::placeholder {
+  color: white;
+}
+.dark::placeholder {
+  color: white;
+}
+.dark {
+  color: white;
+  border-color: white;
+}
+
+.editTodo {
+  display: block;
+  width: 100%;
+  border: 1px solid rgb(151, 151, 151);
+  border-radius: 8px;
+}
+
+/* ----------------helpers ------------------ */
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+  
+
+/* ------------- light mode ---------------- */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #64cbff;
+  }
+  svg {
+    fill: black;
+  }
+  .todo {
+  border-color: black;
+  }
+  .checked {
+    color: rgb(209, 209, 209);
+  }
+  .addTodoDiv {
+    background-color: rgb(22, 70, 77);
+  }
+  button {
+    border-color: black;
+    background-color: rgba(0,0,0,0);
+  }
+  .iconBtn:hover{
+  background-color: rgb(233, 233, 233);
+}
+  input {
+    border-color: #2e2e2e;
+  }
+  ::placeholder {
+  color: grey;
+}
+}
+
+@media (width >= 600px) {
+  .addTodoDiv div{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+}
