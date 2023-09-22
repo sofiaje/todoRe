@@ -149,6 +149,7 @@ input {
   margin-right: 1.5rem;
   margin-bottom: 0.5rem;
   border: none;
+  border-radius: 0;
   background-color: rgba(0,0,0,0);
   border-bottom: 2px solid #d5d5d5;
 }
