@@ -1,10 +1,14 @@
 import { addItem } from "../redux/todoSlice"
 import { useDispatch, useSelector } from "react-redux";
 import TodoItem from "./TodoItem";
+import { useEffect } from "react";
+
 
 const TodoList = () => {
-    const dispatch = useDispatch()
     const list = useSelector((state) => state.todo.list)
+    const dispatch = useDispatch()
+
+
 
     const addTodo = () => {
         let todoTitle = document.getElementById("addTodoInputTitle")
