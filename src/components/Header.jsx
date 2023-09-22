@@ -11,7 +11,6 @@ const Header = () => {
         input.value = ""
     }
 
-    console.log(name)
     return ( 
         <div className="header">
             <h1>Hello {name}</h1>

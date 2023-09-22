@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {loadData} from "../helper/localStorage"
+import {loadName} from "../helper/localStorage"
 
-const name = loadData("name")
+const name = loadName("name")
 
 const headerSlice = createSlice({
     name: "header",  

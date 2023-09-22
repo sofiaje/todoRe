@@ -10,7 +10,6 @@ const todoSlice = createSlice({
     },
     reducers: {
         addItem: (state, action) => {
-            console.log(action.payload)
             state.list.push(action.payload)
             localStorage.setItem("list", JSON.stringify(state.list))
         },
@@ -19,12 +18,10 @@ const todoSlice = createSlice({
             setData("list", state.list)
         },
         completeItem: (state, action) => {
-            console.log("completed")
             state.list[action.payload].isChecked = !state.list[action.payload].isChecked
             setData("list", state.list)
         },
         changeItem: (state, action) => {
-            console.log(action.payload)
             state.list[action.payload.i].title = action.payload.title
             state.list[action.payload.i].desc = action.payload.desc
             setData("list", state.list)
