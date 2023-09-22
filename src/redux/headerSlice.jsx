@@ -12,10 +12,14 @@ const headerSlice = createSlice({
         addName: (state, action) => {
             state.name = action.payload
             localStorage.setItem("name", JSON.stringify(state.name))
+        },
+        clearName: (state, action) => {
+            state.name = null
+            localStorage.setItem("name", JSON.stringify(state.name))
         }
     }
 })
 
-export const { addName } = headerSlice.actions;
+export const { addName, clearName } = headerSlice.actions;
 
 export default headerSlice.reducer;
