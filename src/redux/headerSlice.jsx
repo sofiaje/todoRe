@@ -1,13 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
+import {loadData} from "../helper/localStorage"
+
+const name = loadData("name")
 
 const headerSlice = createSlice({
     name: "header",  
     initialState: {
-        name: ""
+        name: name
     },
     reducers: {
         addName: (state, action) => {
-            state.name = action.payload   
+            state.name = action.payload
+            localStorage.setItem("name", JSON.stringify(state.name))
         }
     }
 })

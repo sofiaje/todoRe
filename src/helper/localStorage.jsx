@@ -1,13 +1,20 @@
-export const loadData = () => {
-    let data = localStorage.getItem("list")
-    let list = JSON.parse(data)
-    if (list) {
-        return list
+export const loadData = (keyName) => {
+    let res = localStorage.getItem(`${keyName}`)
+    console.log(res)
+    let data;
+    try {
+        data = JSON.parse(res)
+    } catch {
+        data = res
+    }
+    if (data) {
+        return data
     } else {
-        return []
+        return null
     }
 }
 
-export const setData = (list) => {
-    localStorage.setItem("list", JSON.stringify(list))
+
+export const setData = (keyName, item) => {
+    localStorage.setItem(`${keyName}`, JSON.stringify({item}))
 }

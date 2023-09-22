@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {loadData, setData} from "../helper/localStorage"
 
-const list = loadData()
+const list = loadData("list")
 
 const todoSlice = createSlice({
     name: "todo",
@@ -16,18 +16,18 @@ const todoSlice = createSlice({
         },
         removeItem: (state, action) => {
             state.list.splice(action.payload, 1)
-            setData(state.list)
+            setData("list", state.list)
         },
         completeItem: (state, action) => {
             console.log("completed")
             state.list[action.payload].isChecked = !state.list[action.payload].isChecked
-            setData(state.list)
+            setData("list", state.list)
         },
         changeItem: (state, action) => {
             console.log(action.payload)
             state.list[action.payload.i].title = action.payload.title
             state.list[action.payload.i].desc = action.payload.desc
-            setData(state.list)
+            setData("list", state.list)
         }
 
     }

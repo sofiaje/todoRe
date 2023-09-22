@@ -51,6 +51,7 @@ button {
   display: inline-block;
   border-radius: 8px;
   border: 2px solid white;
+  color: white;
   background-color: rgba(0,0,0,0);
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -206,6 +207,7 @@ input {
   }
   button {
     border-color: black;
+    color: black;
     background-color: rgba(0,0,0,0);
   }
   .iconBtn:hover{
