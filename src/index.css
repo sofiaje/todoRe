@@ -180,12 +180,12 @@ input {
 
 .flex {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 
-  
+ 
 
 /* ------------- light mode ---------------- */
 
@@ -225,11 +225,16 @@ input {
 }
 }
 
-@media (width >= 600px) {
+@media (width >= 550px) {
   .addTodoDiv div{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 0.4rem;
+  }
+  .flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
