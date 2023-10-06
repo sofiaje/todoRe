@@ -91,7 +91,7 @@ button:focus-visible {
   align-items: center;
   padding: 1rem;
 }
-@media (width >= 400px){
+@media (min-width: 400px){
   .header {
     gap:2rem;
   }
@@ -225,7 +225,7 @@ input {
 }
 }
 
-@media (width >= 550px) {
+@media (min-width: 550px) {
   .addTodoDiv div{
     display: flex;
     flex-direction: row;
